@@ -29,36 +29,55 @@ ul .white {
     height: 16em;
     width: 4em;
     z-index: 1;
-    border-left: 1px solid black;
-    border-bottom: 1px solid #000;
-    border-top: 1px solid #000;
-
     background-color: white;
 }
-#last {
-    border-right: 1px solid #000;
-}
-ul .white:active {
-    background-color: lightgray;
-}
 
-.black {
+ul .black {
     background-color: black;
     height: 8em;
     width: 2em;
     margin: 0 0 0 -1em;
     z-index: 2;
-    border: 1px solid #000;
 }
 
-ul .black:active {
-    background-color: gray;
-}
-
-.a,
-.g,
-.f,
 .d,
-.c {
+.g,
+.a,
+.b,
+.e
+{
     margin: 0 0 0 -1em;
+}
+
+.black button{
+-webkit-box-shadow: 0px 2px 2px 0px rgba(66, 68, 90, 1);
+-moz-box-shadow: 0px 2px 2px 0px rgba(66, 68, 90, 1);
+box-shadow: 0px 2px 2px 0px rgba(66, 68, 90, 1);
+
+background-color: black;
+color: white;
+font-weight: 800;
+}
+
+.black button:active {
+-webkit-box-shadow: inset 0px 2px 2px 0px rgba(66, 68, 90, 1);
+-moz-box-shadow: inset 0px 2px 2px 0px rgba(66, 68, 90, 1);
+box-shadow: inset 0px 2px 2px 0px rgba(66, 68, 90, 1);
+}
+
+
+.white button{
+-webkit-box-shadow: 0px 2px 2px 0px rgba(66, 68, 90, 1);
+-moz-box-shadow: 0px 2px 2px 0px rgba(66, 68, 90, 1);
+box-shadow: 0px 2px 2px 0px rgba(66, 68, 90, 1);
+
+background-color: white;
+color: black;
+font-weight: 800;
+}
+
+.white button:active {
+-webkit-box-shadow: inset 0px 2px 2px 0px rgba(66, 68, 90, 1);
+-moz-box-shadow: inset 0px 2px 2px 0px rgba(66, 68, 90, 1);
+box-shadow: inset 0px 2px 2px 0px rgba(66, 68, 90, 1);
 }

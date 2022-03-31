@@ -5,22 +5,79 @@
     <title>Matematyka w muzyce</title>
     <link href="style.css" rel="stylesheet"/>
     <script src="https://unpkg.com/tone"></script>
+    <style>
+      .black, .white > button {
+      display: flex;
+      flex-direction: column;
+      }
+
+      button {
+      height: 100%;
+      text-align: center;
+      }
+      .white > button {
+      width: 100%;
+      line-height: 24em;
+      text-align: center;
+      }
+    </style>
+
   </head>
   <body>
+
+    <h1>Simple HTML5 Tone.js Demo</h1>
+    <button onclick="playNote('C4')">C4</button>
     <ul class="set">
-      <li class="white b"></li>
-      <li class="black as"></li>
-      <li class="white a"></li>
-      <li class="black gs"></li>
-      <li class="white g"></li>
-      <li class="black fs"></li>
-      <li class="white f"></li>
-      <li class="white e"></li>
-      <li class="black ds"></li>
-      <li class="white d"></li>
-      <li class="black cs"></li>
-      <li class="white c" id="last"></li>
-    </ul>
-    <script src="main.js"></script>
-  </body>
+      <li class="white c">
+        <button onclick="playNote('C4')">C4</button>
+      </li>
+      <li class="black cs" >
+        <button onclick="playNote('C#4')">C#4</button>
+      </li>
+      <li class="white d" >
+        <button onclick="playNote('D4')">D4</button>
+      </li>
+      <li class="black ds">
+        <button onclick="playNote('D#4')">D#4</button>
+      </li>
+      <li class="white e" >
+        <button onclick="playNote('E4')">E4</button>
+      </li>
+      <li class="white f" >
+        <button onclick="playNote('F4')">F4</button>
+      </li>
+      <li class="black fs" >
+        <button onclick="playNote('F#4')">F#4</button>
+      </li>
+      <li class="white g" >
+        <button onclick="playNote('G4')">G4</button>
+      </li>
+      <li class="black gs">
+        <button onclick="playNote('G#4')">G#4</button>
+      </li>
+      <li class="white a" >
+        <button onclick="playNote('A4')">A4</button>
+      </li>
+      <li class="black as" >
+        <button onclick="playNote('A#4')">A#4</button>
+      </li>
+      <li class="white b">
+        <button onclick="playNote('B4')">B4</button>
+      </li>
+      <li class="white c">
+        <button onclick="playNote('C5')">C5</button>
+      </li>
+
+</ul>
+
+<script>
+  function playNote(note) {
+
+  // create a synth
+  let synth = new Tone.Synth().toDestination();
+  // play a note from that synth
+  synth.triggerAttackRelease(note, "8n");
+  }
+</script>
+</body>
 </html>
