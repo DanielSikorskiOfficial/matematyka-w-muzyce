@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+}
+
+.set < *
+{
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+
+}
+
+body {
+    margin: 0;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    float: left;
+}
+
+ul .white {
+    height: 16em;
+    width: 4em;
+    z-index: 1;
+    border-left: 1px solid black;
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+
+    background-color: white;
+}
+#last {
+    border-right: 1px solid #000;
+}
+ul .white:active {
+    background-color: lightgray;
+}
+
+.black {
+    background-color: black;
+    height: 8em;
+    width: 2em;
+    margin: 0 0 0 -1em;
+    z-index: 2;
+    border: 1px solid #000;
+}
+
+ul .black:active {
+    background-color: gray;
+}
+
+.a,
+.g,
+.f,
+.d,
+.c {
+    margin: 0 0 0 -1em;
+}
