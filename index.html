@@ -1,58 +1,102 @@
 <!DOCTYPE html>
-<html lang="pl"  >
+<html lang="pl">
   <head>
     <meta charset="UTF-8"/>
     <title>Matematyka w muzyce</title>
     <link href="style.css" rel="stylesheet"/>
     <script src="https://unpkg.com/tone" defer></script>
-    <script src="main.js" defer></script>
+    <script src="piano.js" defer></script>
+    <script src="size.js" defer></script>
   </head>
   <body>
+    <div id="css-grid-container">
+      <header>
+        <h1>Matematyka w muzyce</h1>
+        <h2>Interwały</h2>
+      </header>
 
-    <h1>Matematyka w muzyce</h1>
-    <h2>Interwały</h2>
-    <button onclick="playNote('C4')">C4</button>
-    <ul class="set">
-      <li class="white c">
-        <button onclick="playNote('C4')">C4</button>
-      </li>
-      <li class="black cs" >
-        <button onclick="playNote('C#4')">C#4</button>
-      </li>
-      <li class="white d" >
-        <button onclick="playNote('D4')">D4</button>
-      </li>
-      <li class="black ds">
-        <button onclick="playNote('D#4')">D#4</button>
-      </li>
-      <li class="white e" >
-        <button onclick="playNote('E4')">E4</button>
-      </li>
-      <li class="white f" >
-        <button onclick="playNote('F4')">F4</button>
-      </li>
-      <li class="black fs" >
-        <button onclick="playNote('F#4')">F#4</button>
-      </li>
-      <li class="white g" >
-        <button onclick="playNote('G4')">G4</button>
-      </li>
-      <li class="black gs">
-        <button onclick="playNote('G#4')">G#4</button>
-      </li>
-      <li class="white a" >
-        <button onclick="playNote('A4')">A4</button>
-      </li>
-      <li class="black as" >
-        <button onclick="playNote('A#4')">A#4</button>
-      </li>
-      <li class="white b">
-        <button onclick="playNote('B4')">B4</button>
-      </li>
-      <li class="white c">
-        <button onclick="playNote('C5')">C5</button>
-      </li>
+      <nav id="toc">
+        <ol>
+          <li><a> Pryma czysta</a></li>
+          <li><a> sekunda mała</a></li>
+          <li><a> sekunda wielka</a></li>
+          <li><a> Tercja mała</a></li>
+          <li><a> Tercja wielka</a></li>
+          <li><a> Kwarta czysta</a></li>
+          <li><a> Kwinta czysta</a></li>
+          <li><a> Tryton</a></li>
+          <li><a> Seksta mała</a></li>
+          <li><a>Seksta wielka</a></li>
+          <li><a>Septyma mała</a></li>
+          <li><a>Septyma wielka</a></li>
+          <li><a>Oktawa czysta</a></li>
+        </ol>
+        </nav>
 
-    </ul>
+      <content>
+        <article>
+          <li> Pryma czysta - powtórzenie dźwięku (nie ma między nimi ani jednego półtonu), jest konsonansem absolutnym | półtony: 0</li>
+          <li> sekunda mała - jest dysonansem, dźwięki są bardzo blisko siebie, więc brzmi brzydko | półtony: 1</li>
+          <li> sekunda wielka - jest dysonansem, idzie "po kolei", tak jak gama | półtony : 2</li>
+          <li> Tercja mała - brzmi "smutno", ciągnie do trójdźwięku molowego, jest konsonansem niedoskonałym | półtony: 3</li>
+          <li> Tercja wielka - brzmi "wesoło", ciągnie do trójdźwięku durowego, jest konsonansem średnim| półtony: 4</li>
+          <li> Kwarta czysta - jest konsonansem doskonałym, | półtony: 5</li>
+          <li> Kwinta czysta - jest konsonansem doskonałym, kwintą czystą w górę zaczyna się piosenka Elvisa Presleya "Can't help fallin' in love" | półtony: 6</li>
+          <li> Tryton - jest dysonansem, jest to kwarta zwiększona lub kwinta zmniejszona | półtony: 7</li>
+          <li> Seksta mała - jest smutna, jest konsonansem niedoskonałym | półtony: 8</li>
+          <li>Seksta wielka - jest konsonansem średnim | półtony: 9</li>
+          <li>Septyma mała - jest dysonansem i jest jedynym interwałem "małym", którego symbol jest zapisany bez znaczka diminuendo| półtony: 10</li>
+          <li>Septyma wielka - jest dysonansem i ciągnie do "rozwiązania", czyli do oktawy| półtony: 11</li>
+          <li>Oktawa czysta - jest konsonansem absolutnym, powtórzenie tego samego dźwięku, ale o 12 półtonów wyższego | półtony: 12</li>
+        </article>
+
+        <ul class="set">
+          <li class="white c">
+            <div onmousedown="playNote('C4')"><span>C4</span></div>
+          </li>
+          <li class="black cs" >
+            <div onmousedown="playNote('C#4')"><span>C#4</span></div>
+          </li>
+          <li class="white d" >
+            <div onmousedown="playNote('D4')"><span>D4</span></div>
+          </li>
+          <li class="black ds">
+            <div onmousedown="playNote('D#4')"><span>D#4</span></div>
+          </li>
+          <li class="white e" >
+            <div onmousedown="playNote('E4')"><span>E4</span></div>
+          </li>
+          <li class="white f" >
+            <div onmousedown="playNote('F4')"><span>F4</span></div>
+          </li>
+          <li class="black fs" >
+            <div onmousedown="playNote('F#4')"><span>F#4</span></div>
+          </li>
+          <li class="white g" >
+            <div onmousedown="playNote('G4')"<span>G4</span></div>
+          </li>
+          <li class="black gs">
+            <div onmousedown="playNote('G#4')"<span>G#4</span></div>
+          </li>
+          <li class="white a" >
+            <div onmousedown="playNote('A4')"<span>A4</span></div>
+          </li>
+          <li class="black as" >
+            <div onmousedown="playNote('A#4')"<span>A#4</span></div>
+          </li>
+          <li class="white b">
+            <div onmousedown="playNote('B4')"<span>B4</span></div>
+          </li>
+          <li class="white c">
+            <div onmousedown="playNote('C5')"<span>C5</span></div>
+          </li>
+          
+        </ul>
+      </content>
+      <footer>
+        <span>Wykonał Daniel Sikorski</span>
+      </footer>
+
+    </div>
   </body>
 </html>

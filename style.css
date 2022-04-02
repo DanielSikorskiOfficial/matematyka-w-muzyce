@@ -1,99 +1,132 @@
 * {
-    box-sizing: border-box;
-}
-
-.set < *
-{
-    user-drag: none;
-    -webkit-user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
+  margin: 0;
+}
+
+.set > * {
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }
 
 li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    position: relative;
-    float: left;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  float: left;
+}
+
+li > div {
+  cursor: pointer;
 }
 
 ul .white {
-    height: 16em;
-    width: 4em;
-    z-index: 1;
-    background-color: white;
+  height: 16em;
+  width: 4em;
+  z-index: 1;
+  background-color: white;
 }
 
 ul .black {
-    background-color: black;
-    height: 8em;
-    width: 2em;
-    margin: 0 0 0 -1em;
-    z-index: 2;
+  height: 8em;
+  width: 2em;
+  margin: 0 0 0 -1em;
+  z-index: 2;
 }
 
 .d,
 .g,
 .a,
 .b,
-.e
-{
-    margin: 0 0 0 -1em;
+.e {
+  margin: 0 0 0 -1em;
 }
 
-.black button{
-    -webkit-box-shadow: 0px 2px 2px 0px rgba(66, 68, 90, 1);
-    -moz-box-shadow: 0px 2px 2px 0px rgba(66, 68, 90, 1);
-    box-shadow: 0px 2px 2px 0px rgba(66, 68, 90, 1);
-
-    background-color: black;
-    color: white;
-    font-weight: 800;
+.black div,
+.white div {
+  -webkit-box-shadow: 0px 2px 2px 0px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 0px 2px 2px 0px rgba(66, 68, 90, 1);
+  box-shadow: 0px 2px 2px 0px rgba(66, 68, 90, 1);
+  font-weight: 800;
 }
 
-.black button:active {
-    -webkit-box-shadow: inset 0px 2px 2px 0px rgba(66, 68, 90, 1);
-    -moz-box-shadow: inset 0px 2px 2px 0px rgba(66, 68, 90, 1);
-    box-shadow: inset 0px 2px 2px 0px rgba(66, 68, 90, 1);
+.black {
+  background-color: black;
+  color: white;
 }
 
-
-.white button{
-    -webkit-box-shadow: 0px 2px 2px 0px rgba(66, 68, 90, 1);
-    -moz-box-shadow: 0px 2px 2px 0px rgba(66, 68, 90, 1);
-    box-shadow: 0px 2px 2px 0px rgba(66, 68, 90, 1);
-
-    background-color: white;
-    color: black;
-    font-weight: 800;
+.white {
+  background-color: white;
+  color: black;
 }
 
-.white button:active {
-    -webkit-box-shadow: inset 0px 2px 2px 0px rgba(66, 68, 90, 1);
-    -moz-box-shadow: inset 0px 2px 2px 0px rgba(66, 68, 90, 1);
-    box-shadow: inset 0px 2px 2px 0px rgba(66, 68, 90, 1);
+.white div:active,
+.black div:active {
+  -webkit-box-shadow: inset 0px 6px 12px 0px rgba(66, 68, 90, 1);
+  -moz-box-shadow: inset 0px 6px 12px 0px rgba(66, 68, 90, 1);
+  box-shadow: inset 0px 6px 12px 0px rgba(66, 68, 90, 1);
+  border-bottom: 1px solid rgba(66, 68, 90, 1);
 }
 
-
-.black, .white > button {
-    display: flex;
-    flex-direction: column;
+.black div:hover {
+  background-color: darkred;
 }
 
-button {
-    height: 100%;
-    text-align: center;
+.white div:hover {
+  background-color: red;
 }
-.white > button {
-    width: 100%;
-    line-height: 24em;
-    text-align: center;
+
+.black,
+.white > div {
+  line-height: 12em;
+}
+
+div {
+  height: 100%;
+  text-align: center;
+}
+.white > div {
+  width: 100%;
+  line-height: 24em;
+  text-align: center;
+}
+
+/*CSS GRID*/
+
+/* Aliases
+ * toc = table of contents
+ */
+
+#toc {
+  grid-area: toc;
+}
+header {
+  grid-area: header;
+}
+content {
+  grid-area: content;
+}
+footer {
+  grid-area: footer;
+}
+
+#css-grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header header header"
+    "toc content content content"
+    "toc content content content"
+    "toc content content content"
+    "footer footer footer footer";
+
+    grid-template-columns: 0.8fr 1fr 1fr 1fr;
 }
