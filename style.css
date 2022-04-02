@@ -50,34 +50,50 @@ ul .black {
 }
 
 .black button{
--webkit-box-shadow: 0px 2px 2px 0px rgba(66, 68, 90, 1);
--moz-box-shadow: 0px 2px 2px 0px rgba(66, 68, 90, 1);
-box-shadow: 0px 2px 2px 0px rgba(66, 68, 90, 1);
+    -webkit-box-shadow: 0px 2px 2px 0px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 2px 2px 0px rgba(66, 68, 90, 1);
+    box-shadow: 0px 2px 2px 0px rgba(66, 68, 90, 1);
 
-background-color: black;
-color: white;
-font-weight: 800;
+    background-color: black;
+    color: white;
+    font-weight: 800;
 }
 
 .black button:active {
--webkit-box-shadow: inset 0px 2px 2px 0px rgba(66, 68, 90, 1);
--moz-box-shadow: inset 0px 2px 2px 0px rgba(66, 68, 90, 1);
-box-shadow: inset 0px 2px 2px 0px rgba(66, 68, 90, 1);
+    -webkit-box-shadow: inset 0px 2px 2px 0px rgba(66, 68, 90, 1);
+    -moz-box-shadow: inset 0px 2px 2px 0px rgba(66, 68, 90, 1);
+    box-shadow: inset 0px 2px 2px 0px rgba(66, 68, 90, 1);
 }
 
 
 .white button{
--webkit-box-shadow: 0px 2px 2px 0px rgba(66, 68, 90, 1);
--moz-box-shadow: 0px 2px 2px 0px rgba(66, 68, 90, 1);
-box-shadow: 0px 2px 2px 0px rgba(66, 68, 90, 1);
+    -webkit-box-shadow: 0px 2px 2px 0px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 2px 2px 0px rgba(66, 68, 90, 1);
+    box-shadow: 0px 2px 2px 0px rgba(66, 68, 90, 1);
 
-background-color: white;
-color: black;
-font-weight: 800;
+    background-color: white;
+    color: black;
+    font-weight: 800;
 }
 
 .white button:active {
--webkit-box-shadow: inset 0px 2px 2px 0px rgba(66, 68, 90, 1);
--moz-box-shadow: inset 0px 2px 2px 0px rgba(66, 68, 90, 1);
-box-shadow: inset 0px 2px 2px 0px rgba(66, 68, 90, 1);
+    -webkit-box-shadow: inset 0px 2px 2px 0px rgba(66, 68, 90, 1);
+    -moz-box-shadow: inset 0px 2px 2px 0px rgba(66, 68, 90, 1);
+    box-shadow: inset 0px 2px 2px 0px rgba(66, 68, 90, 1);
+}
+
+
+.black, .white > button {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    height: 100%;
+    text-align: center;
+}
+.white > button {
+    width: 100%;
+    line-height: 24em;
+    text-align: center;
 }
