@@ -146,6 +146,10 @@ content {text-align: left;
     }
 
 
+    h1
+    {
+        text-align: center;
+    }
 
     /* colors */
     body {
@@ -171,3 +175,17 @@ content {text-align: left;
         background-color: #826F66;
     }
     
+
+
+    /* center text vertical */
+
+    /* div {
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+      }
+      span {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: normal;
+      } */
