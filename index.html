@@ -4,22 +4,21 @@
     <meta charset="UTF-8" />
     <title>Matematyka w muzyce</title>
     <link href="style.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/325/brain_1f9e0.png" type="image/x-icon">
     <script src="https://unpkg.com/tone" defer></script>
+    <script src="faviconswitch.js" defer></script>
     <script src="piano.js" defer></script>
-    <script src="size.js" defer></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap"
-      rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap"
+    rel="stylesheet"
     />
+
   </head>
   <body>
-    <div id="css-grid-container">
       <header>
-        <li>
           <h1>Matematyka w muzyce</h1>
-          <h2>Interwały</h2>
-        </li>
+          <h2>Czyli dlaczego matematyka jest wszędzie</h2>
       </header>
 
       <nav id="toc">
@@ -40,90 +39,91 @@
         </ol>
       </nav>
 
-      <content>
+      <main>
         <article>
+          <h2>Interwały</h2>
            <section id="1">
-            <h1>Pryma czysta</h1><span>
+            <h3>Pryma czysta</h3><span>
               
               powtórzenie dźwięku (nie ma między nimi ani jednego półtonu), jest
               konsonansem absolutnym | półtony: 0
             </span>
           </section>
            <section id="2">
-            <h1>sekunda mała</h1><span>
+            <h3>sekunda mała</h3><span>
               
               jest dysonansem, dźwięki są bardzo blisko siebie, więc brzmi brzydko
               | półtony: 1
             </span>
           </section>
            <section id="3">
-            <h1>sekunda wielka</h1><span>
+            <h3>sekunda wielka</h3><span>
               
               jest dysonansem, idzie "po kolei", tak jak gama | półtony : 2
             </span>
           </section>
              <section id="4">
-            <h1>Tercja mała</h1><span>
+            <h3>Tercja mała</h3><span>
               
               brzmi "smutno", ciągnie do trójdźwięku molowego, jest konsonansem
               niedoskonałym | półtony: 3
             </span>
           </section>
            <section id="5">
-            <h1>Tercja wielka</h1><span>
+            <h3>Tercja wielka</h3><span>
               
               brzmi "wesoło", ciągnie do trójdźwięku durowego, jest konsonansem
               średnim| półtony: 4
             </span>
           </section>
            <section id="6">
-            <h1>Kwarta czysta</h1><span>
+            <h3>Kwarta czysta</h3><span>
               
               jest konsonansem doskonałym, | półtony: 5
-                        </section>
             </span>
+          </section>
            <section id="7">
-            <h1>Kwinta czysta</h1><span>
+            <h3>Kwinta czysta</h3><span>
               
               jest konsonansem doskonałym, kwintą czystą w górę zaczyna się
               piosenka Elvisa Presleya "Can't help fallin' in love" | półtony: 6
             </span>
           </section>
            <section id="8">
-            <h1>Tryton</h1><span>
+            <h3>Tryton</h3><span>
               
               jest dysonansem, jest to kwarta zwiększona lub kwinta zmniejszona |
               półtony: 7
             </span>
           </section>
            <section id="9">
-            <h1>Seksta mała</h1><span>
+            <h3>Seksta mała</h3><span>
               
               jest smutna, jest konsonansem niedoskonałym | półtony: 8
-                        </section>
             </span>
+          </section>
            <section id="10">
-            <h1>Seksta wielka</h1><span>
+            <h3>Seksta wielka</h3><span>
               
               jest konsonansem średnim | półtony: 9
-                        </section>
             </span>
+          </section>
            <section id="11">
-            <h1>Septyma mała</h1><span>
+            <h3>Septyma mała</h3><span>
               
               jest dysonansem i jest jedynym interwałem "małym", którego symbol
               jest zapisany bez znaczka diminuendo| półtony: 10
             </span>
           </section>
            <section id="12">
-            <h1>Septyma wielka</h1><span>
+            <h3>Septyma wielka</h3><span>
               
               jest dysonansem i ciągnie do "rozwiązania", czyli do oktawy|
               półtony: 11
             </span>
           </section>
            <section id="13">
-            <h1>Oktawa czysta</h1><span>
+            <h3>Oktawa czysta</h3><span>
               
               jest konsonansem absolutnym, powtórzenie tego samego dźwięku, ale o
               12 półtonów wyższego | półtony: 12
@@ -131,6 +131,8 @@
           </section>
         </article>
 
+        <section class="piano">
+          <h2>Wypróbuj: </h2>
         <ul class="set">
           <li class="white c">
             <div onmousedown="playNote('C4')"><span>C4</span></div>
@@ -172,10 +174,11 @@
             <div onmousedown="playNote('C5')"><span>C5</span></div>
           </li>
         </ul>
-      </content>
+      </section>
+    </main>
       <footer>
         <span>Wykonali: Daniel Sikorski i Kacper Dyduch</span>
       </footer>
-    </div>
+
   </body>
 </html>

@@ -1,54 +1,36 @@
-* {
-  box-sizing: border-box;
-}
-
+/* colors */
 body {
-  margin: 0;
-  font-family: 'PT Sans Narrow', sans-serif;
+  background-color: #3a3845;
+}
+h1 {
+  background-color: #f7ccac;
+}
+h2 {
+  background-color: #c69b7b;
+}
+nav > * {
+  background-color: #c69b7b;
+}
+article > * {
+  background-color: #c69b7b;
+}
+footer {
+  background-color: #826f66;
 }
 
-.set > * {
-    -webkit-user-drag: none;
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently
-    supported by Chrome and Opera */
+.black {
+  background-color: black;
+  color: white;
 }
 
-.set > li {
-    padding: 0;
-    list-style: none;
-    position: relative;
-    float: left;
+.white {
+  background-color: white;
+  color: black;
 }
 
-li > div {
-    cursor: pointer;
-}
 
-ul .white {
-    height: 16em;
-    width: 4em;
-    z-index: 1;
-    background-color: white;
-}
-
-ul .black {
-    height: 8em;
-    width: 2em;
-    margin: 0 0 0 -1em;
-  z-index: 2;
-}
-
-.d,
-.g,
-.a,
-.b,
-.e {
-    margin: 0 0 0 -1em;
+.piano h2 {
+  margin-top: 0.8em;
 }
 
 .black div,
@@ -59,45 +41,89 @@ ul .black {
   font-weight: 800;
 }
 
-.black {
-    background-color: black;
-    color: white;
-}
-
-.white {
-    background-color: white;
-    color: black;
-}
-
 .white div:active,
 .black div:active {
-    -webkit-box-shadow: inset 0px 6px 12px 0px rgba(66, 68, 90, 1);
-    -moz-box-shadow: inset 0px 6px 12px 0px rgba(66, 68, 90, 1);
-    box-shadow: inset 0px 6px 12px 0px rgba(66, 68, 90, 1);
-    border-bottom: 1px solid rgba(66, 68, 90, 1);
+  -webkit-box-shadow: inset 0px 6px 12px 0px rgba(66, 68, 90, 1);
+  -moz-box-shadow: inset 0px 6px 12px 0px rgba(66, 68, 90, 1);
+  box-shadow: inset 0px 6px 12px 0px rgba(66, 68, 90, 1);
+  border-bottom: 1px solid rgba(66, 68, 90, 1);
 }
 
 .black div:hover {
-    background-color: darkred;
+  background-color: darkred;
 }
 
 .white div:hover {
-    background-color: red;
+  background-color: red;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+
+.set > * {
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+    supported by Chrome and Opera */
+}
+
+.set > li {
+  padding: 0;
+  list-style: none;
+  position: relative;
+  float: left;
+}
+
+li > div {
+  cursor: pointer;
+}
+
+ul .white {
+  height: 16em;
+  width: 4em;
+  z-index: 1;
+  background-color: white;
+}
+
+ul .black {
+  height: 8em;
+  width: 2em;
+  margin: 0 0 0 -1em;
+  z-index: 2;
+}
+
+.d,
+.g,
+.a,
+.b,
+.e {
+  margin: 0 0 0 -1em;
 }
 
 .black,
 .white > div {
-    line-height: 12em;
+  line-height: 12em;
+}
+
+.white > div {
+  width: 100%;
+  line-height: 24em;
+  text-align: center;
 }
 
 div {
-    height: 100%;
-    text-align: center;
-}
-.white > div {
-    width: 100%;
-    line-height: 24em;
-    text-align: center;
+  height: 100%;
+  text-align: center;
 }
 
 /*CSS GRID*/
@@ -107,79 +133,47 @@ div {
 */
 
 #toc {
-    grid-area: toc;
+  grid-area: toc;
 }
 header {
-    grid-area: header;
+  grid-area: header;
 }
-content {
-    grid-area: content;
+main {
+  grid-area: main;
 }
 footer {
-    grid-area: footer;
+  grid-area: footer;
 }
 
-#css-grid-container {
-    display: grid;
-    grid-template-areas:
+body {
+  display: grid;
+  grid-template-areas:
     "header header header header"
-    "toc content content content"
-    "toc content content content"
-    "toc content content content"
+    "toc main main main"
+    "toc main main main"
+    "toc main main main"
     "footer footer footer footer";
-    
-    grid-template-columns: 0.8fr 1fr 1fr 1fr;
-}
 
+  grid-template-columns: 0.6fr 1fr 1fr 1fr;
+}
 
 /* text align */
+main {
+  margin: 1em;
+}
+header > h1,
+h2 {
+  margin: 0px;
+  padding: 1em;
+}
+nav > * {
+  margin: 0px;
+  padding: 0px;
+}
 
-nav {text-align: left;}
+/* center text vertical */
 
-content {text-align: left;
-    margin: 1em;}
-    
-    
-    header > h1,h2{
-        margin: 0px;
-        padding: 1em;
-    }
-
-
-    h1
-    {
-        text-align: center;
-    }
-
-    /* colors */
-    body {
-        background-color: #3A3845;
-    }
-
-    h1 {
-        background-color: #F7CCAC;
-    }
-    h2 {
-        background-color: #C69B7B;
-    }
-
-    nav > * {
-        background-color: #C69B7B;
-    }
-
-    article > * {
-        background-color: #C69B7B;
-    }
-
-    footer {
-        background-color: #826F66;
-    }
-    
-
-
-    /* center text vertical */
-
-    /* div {
+/* div {
         height: 20px;
         line-height: 20px;
         text-align: center;
