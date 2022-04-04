@@ -200,6 +200,7 @@ li > div {
   color: #000;
   border-bottom: 2px solid #000;
 }
+#sm .c, 
 #sm .cs {
   background-color: #d6fc00;
   color: #000;
@@ -269,6 +270,14 @@ li > div {
   border-bottom: 2px solid #000;
   border-radius: 4px;
 }
+#septw .c,
+#septw .b {
+  background-color: #d6fc00;
+  color: #000;
+  border-bottom: 2px solid #000;
+  border-radius: 4px;
+}
+
 
 #oktcz .c,
 #oktcz .c5 {
