@@ -10,7 +10,7 @@
       type="image/x-icon"
     />
     <script src="https://unpkg.com/tone" defer></script>
-    <script src="faviconswitch.js" defer></script>
+
     <script src="piano.js" defer></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,30 +24,33 @@
       <h1>Matematyka w muzyce</h1>
       <h2>Czyli dlaczego matematyka jest wszędzie</h2>
     </header>
-
-    <nav id="toc">
-      <ol>
-        <li><a href="#inf1"> Pryma czysta</a></li>
-        <li><a href="#inf2"> sekunda mała</a></li>
-        <li><a href="#inf3"> sekunda wielka</a></li>
-        <li><a href="#inf4"> Tercja mała</a></li>
-        <li><a href="#inf5"> Tercja wielka</a></li>
-        <li><a href="#inf6"> Kwarta czysta</a></li>
-        <li><a href="#inf7"> Kwinta czysta</a></li>
-        <li><a href="#inf8"> Tryton</a></li>
-        <li><a href="#inf9"> Seksta mała</a></li>
-        <li><a href="#inf10">Seksta wielka</a></li>
-        <li><a href="#inf11">Septyma mała</a></li>
-        <li><a href="#inf12">Septyma wielka</a></li>
-        <li><a href="#inf13">Oktawa czysta</a></li>
-        <li><a href="#wnioski">Wnioski</a></li>
-        <li><a href="#bonus">Bonus</a></li>
-      </ol>
+<div class="nav">
+  <nav id="toc" >
+    <ul>
+        <a href="#home"> <li>Strona główna</li></a>
+        <a href="#inf1" onmouseover="playNote('C4')"> <li>Pryma czysta</li></a>
+        <a href="#inf2" onmouseover="playNote('C4');playNote('C#4')""> <li>Sekunda mała</li></a>
+        <a href="#inf3" onmouseover="playNote('C4');playNote('D4')""> <li>Sekunda wielka</li></a>
+        <a href="#inf4" onmouseover="playNote('C4');playNote('D#4')""> <li>Tercja mała</li></a>
+        <a href="#inf5" onmouseover="playNote('C4');playNote('E4')""> <li>Tercja wielka</li></a>
+        <a href="#inf6" onmouseover="playNote('C4');playNote('F4')""> <li>Kwarta czysta</li></a>
+        <a href="#inf7" onmouseover="playNote('C4');playNote('F#4')""> <li>Kwinta czysta</li></a>
+        <a href="#inf8" onmouseover="playNote('C4');playNote('G4')""> <li>Tryton</li></a>
+        <a href="#inf9" onmouseover="playNote('C4');playNote('G#4')""> <li>Seksta mała</li></a>
+        <a href="#inf10" onmouseover="playNote('C4');playNote('A4')""><li>Seksta wielka</li></a>
+        <a href="#inf11" onmouseover="playNote('C4');playNote('A#4')""><li>Septyma mała</li></a>
+        <a href="#inf12" onmouseover="playNote('C4');playNote('B4')""><li>Septyma wielka</li></a>
+        <a href="#inf13" onmouseover="playNote('C4');playNote('C5')""><li>Oktawa czysta</li></a>
+        <a href="#wnioski"><li>Wnioski</li></a>
+        <a href="#bonus"><li>Bonus</li></a>
+      </ul>
     </nav>
-
+  </div>      
     <main>
       <article>
-        <h2>Interwały</h2>
+        <section id="home">
+          <h2>Interwały</h2>
+        </section>
         <p id="stdef">
           W XVIII wieku do muzyki wprowadzono nowy rodzaj stroju muzycznego -
           rodzaj jednolitej skali. W tym stroju oktawa została podzielona na 12
@@ -63,6 +66,7 @@
             konsonansem absolutnym
           </span>
           <div class="semitones">półtony: 0</div>
+            <button class="test" onmousedown="playNote('C4')">Spróbuj</button>
         </section>
         <!-- pianino -->
         <section class="piano" id="p">
@@ -110,14 +114,14 @@
             </ul>
           </div>
         </section>
-        <!-- End of piano -->
         <section class="info" id="inf2">
-          <h3>Sekunda mała</h3>
+            <h3>Sekunda mała</h3>
           <span>
             jest dysonansem, dźwięki są bardzo blisko siebie, więc brzmi
             "brzydko"
           </span>
           <div class="semitones">półtony: 1</div>
+          <button class="test" onmousedown="playNote('C4');playNote('C#4')";playNote('C#4')">Spróbuj</button>
         </section>
         <!-- pianino -->
         <section class="piano" id="sm">
@@ -170,6 +174,7 @@
           <h3>Sekunda wielka</h3>
           <span> jest dysonansem, idzie "po kolei", tak jak gama </span>
           <div class="semitones">półtony: 2</div>
+          <button class="test" onmousedown="playNote('C4');playNote('D4')">Spróbuj</button>
         </section>
         <!-- pianino -->
         <section class="piano" id="sw">
@@ -225,6 +230,7 @@
             niedoskonałym
           </span>
           <div class="semitones">półtony: 3</div>
+          <button class="test" onmousedown="playNote('C4');playNote('D#4')">Spróbuj</button>
         </section>
         <!-- pianino -->
         <section class="piano" id="tm">
@@ -280,6 +286,7 @@
             średnim
           </span>
           <div class="semitones">półtony: 4</div>
+          <button class="test" onmousedown="playNote('C4');playNote('E4')">Spróbuj</button>
         </section>
         <!-- pianino -->
         <section class="piano" id="tw">
@@ -332,9 +339,66 @@
           <h3>Kwarta czysta</h3>
           <span> jest konsonansem doskonałym, </span>
           <div class="semitones">półtony: 5</div>
+          <button class="test" onmousedown="playNote('C4');playNote('F4')">Spróbuj</button>
         </section>
         <!-- pianino -->
         <section class="piano" id="kwacz">
+          <div class="piano">
+            <ul class="set">
+              <li class="white c">
+                <div onmousedown="playNote('C4')"><span>C4</span></div>
+              </li>
+              <li class="black cs">
+                <div onmousedown="playNote('C#4')"><span>C#4</span></div>
+              </li>
+              <li class="white d">
+                <div onmousedown="playNote('D4')"><span>D4</span></div>
+              </li>
+              <li class="black ds">
+                <div onmousedown="playNote('D#4')"><span>D#4</span></div>
+              </li>
+              <li class="white e">
+                <div onmousedown="playNote('E4')"><span>E4</span></div>
+              </li>
+              <li class="white f">
+                <div onmousedown="playNote('F4')"><span>F4</span></div>
+              </li>
+              <li class="black fs">
+                <div onmousedown="playNote('F#4')"><span>F#4</span></div>
+              </li>
+              <li class="white g">
+                <div onmousedown="playNote('G4')"><span>G4</span></div>
+              </li>
+              <li class="black gs">
+                <div onmousedown="playNote('G#4')"><span>G#4</span></div>
+              </li>
+              <li class="white a">
+                <div onmousedown="playNote('A4')"><span>A4</span></div>
+              </li>
+              <li class="black as">
+                <div onmousedown="playNote('A#4')"><span>A#4</span></div>
+              </li>
+              <li class="white b">
+                <div onmousedown="playNote('B4')"><span>B4</span></div>
+              </li>
+              <li class="white c5">
+                <div onmousedown="playNote('C5')"><span>C5</span></div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- End of piano -->
+
+        <section class="info" id="inf8">
+          <h3>Tryton</h3>
+          <span>
+            jest dysonansem, jest to kwarta zwiększona lub kwinta zmniejszona
+          </span>
+          <div class="semitones">półtony: 7</div>
+          <button class="test" onmousedown="playNote('C4');playNote('F#4')">Spróbuj</button>
+        </section>
+        <!-- pianino -->
+        <section class="piano" id="kwicz">
           <div class="piano">
             <ul class="set">
               <li class="white c">
@@ -389,64 +453,11 @@
             help fallin' in love"
           </span>
           <div class="semitones">półtony: 6</div>
+          <button class="test" onmousedown="playNote('C4');playNote('G4')">Spróbuj</button>
         </section>
+
         <!-- pianino -->
-                <!-- pianino -->
-                <section class="piano" id="trt">
-                  <div class="piano">
-                    <ul class="set">
-                      <li class="white c">
-                        <div onmousedown="playNote('C4')"><span>C4</span></div>
-                      </li>
-                      <li class="black cs">
-                        <div onmousedown="playNote('C#4')"><span>C#4</span></div>
-                      </li>
-                      <li class="white d">
-                        <div onmousedown="playNote('D4')"><span>D4</span></div>
-                      </li>
-                      <li class="black ds">
-                        <div onmousedown="playNote('D#4')"><span>D#4</span></div>
-                      </li>
-                      <li class="white e">
-                        <div onmousedown="playNote('E4')"><span>E4</span></div>
-                      </li>
-                      <li class="white f">
-                        <div onmousedown="playNote('F4')"><span>F4</span></div>
-                      </li>
-                      <li class="black fs">
-                        <div onmousedown="playNote('F#4')"><span>F#4</span></div>
-                      </li>
-                      <li class="white g">
-                        <div onmousedown="playNote('G4')"><span>G4</span></div>
-                      </li>
-                      <li class="black gs">
-                        <div onmousedown="playNote('G#4')"><span>G#4</span></div>
-                      </li>
-                      <li class="white a">
-                        <div onmousedown="playNote('A4')"><span>A4</span></div>
-                      </li>
-                      <li class="black as">
-                        <div onmousedown="playNote('A#4')"><span>A#4</span></div>
-                      </li>
-                      <li class="white b">
-                        <div onmousedown="playNote('B4')"><span>B4</span></div>
-                      </li>
-                      <li class="white c5">
-                        <div onmousedown="playNote('C5')"><span>C5</span></div>
-                      </li>
-                    </ul>
-                  </div>
-                </section>
-                <!-- End of piano -->
-       
-        <section class="info" id="inf8">
-          <h3>Tryton</h3>
-          <span>
-            jest dysonansem, jest to kwarta zwiększona lub kwinta zmniejszona
-          </span>
-          <div class="semitones">półtony: 7</div>
-        </section>
-        <section class="piano" id="kwicz">
+        <section class="piano" id="trt">
           <div class="piano">
             <ul class="set">
               <li class="white c">
@@ -496,6 +507,7 @@
           <h3>Seksta mała</h3>
           <span> jest smutna, jest konsonansem niedoskonałym </span>
           <div class="semitones">półtony: 8</div>
+          <button class="test" onmousedown="playNote('C4');playNote('G#4')">Spróbuj</button>
         </section>
         <!-- pianino -->
         <section class="piano" id="seksm">
@@ -548,6 +560,7 @@
           <h3>Seksta wielka</h3>
           <span> jest konsonansem średnim </span>
           <div class="semitones">półtony: 9</div>
+          <button class="test" onmousedown="playNote('C4');playNote('A4')">Spróbuj</button>
         </section>
         <!-- pianino -->
         <section class="piano" id="seksw">
@@ -623,6 +636,7 @@
             jest zapisany bez znaczka diminuendo
           </span>
           <div class="semitones">półtony: 10</div>
+          <button class="test" onmousedown="playNote('C4');playNote('A#4')">Spróbuj</button>
         </section>
         <!-- pianino -->
         <section class="piano" id="septm">
@@ -677,6 +691,7 @@
             jest dysonansem i ciągnie do "rozwiązania", czyli do oktawy
           </span>
           <div class="semitones">półtony: 11</div>
+          <button class="test" onmousedown="playNote('C4');playNote('B4')">Spróbuj</button>
         </section>
         <!-- pianino -->
         <section class="piano" id="septw">
@@ -732,6 +747,7 @@
             12 półtonów wyższego
           </span>
           <div class="semitones">półtony: 12</div>
+          <button class="test" onmousedown="playNote('C4');playNote('C5')">Spróbuj</button>
         </section>
         <!-- pianino -->
         <section class="piano" id="oktcz">
@@ -779,35 +795,6 @@
             </ul>
           </div>
 
-
-          1. Pryma czysta - powtórzenie dźwięku (nie ma między nimi ani jednego półtonu), jest konsonansem absolutnym | półtony: 0
-
-          2. sekunda mała - jest dysonansem, dźwięki są bardzo blisko siebie, więc brzmi brzydko | półtony: 1
-          
-          3. sekunda wielka - jest dysonansem, idzie "po kolei", tak jak gama | półtony : 2
-          
-          4. Tercja mała - brzmi "smutno", ciągnie do trójdźwięku molowego, jest konsonansem niedoskonałym | półtony: 3
-          
-          5. Tercja wielka - brzmi "wesoło", ciągnie do trójdźwięku durowego, jest konsonansem średnim| półtony: 4
-          
-          6. Kwarta czysta - jest konsonansem doskonałym, | półtony: 5
-          
-          7. Kwinta czysta - jest konsonansem doskonałym, kwintą czystą w górę zaczyna się piosenka Elvisa Presleya "Can't help fallin' in love" | półtony: 6
-          
-          8. Tryton - jest dysonansem, jest to kwarta zwiększona lub kwinta zmniejszona | półtony: 7
-          
-          9. Seksta mała - jest smutna, jest konsonansem niedoskonałym | półtony: 8
-          
-          10. Seksta wielka - jest konsonansem średnim | półtony: 9
-          
-          11. Septyma mała - jest dysonansem i jest jedynym interwałem "małym", którego symbol jest zapisany bez znaczka diminuendo| półtony: 10
-          
-          12. Septyma wielka - jest dysonansem i ciągnie do "rozwiązania", czyli do oktawy| półtony: 11
-          
-          13. Oktawa czysta - jest konsonansem absolutnym, powtórzenie tego samego dźwięku, ale o 12 półtonów wyższego | półtony: 12
-
-
-
         </section>
         <!-- End of piano -->
 
@@ -816,16 +803,27 @@
           <p>
             Interwały, które "brzmią dobrze": tercja mała, tercja wielka, kwinta
             doskonała, kwinta doskonała, seksta mała, seksta wielka, oktawa
-            czysta. Czemu? 
+            czysta. Czemu na przykład tryton brzmi "źle, nieprzyjmenie"?
           </p>
-          <br>
+          <br />
           <p>Przykład:</p>
-          <div class="freq" onmousedown="playNote('100hz')"><span>440hz</span></div>
-          <div class="freq" onmousedown="playNote('487.123hz')"><span>440hz</span></div>
-          <div class="freq" onmousedown="playNote('100hz'); playNote('447.123hz')"><span>Razem</span></div>
-        
+          <div class="wnioskiwrap">
+            <div class="freq" onmousedown="playNote('C4')">
+              <span>C4</span>
+            </div>
+            <div class="freq" onmousedown="playNote('F#4')">
+              <span>F#4</span>
+            </div>
+            <div
+            class="freq"
+            onmousedown="playNote('C4'); playNote('F#4')">
+            <span>Razem</span>
+          </div>
+        </div>
         </section>
-
+        <section class="info">
+          <p>Jest on "niestabilny" ze względu na wzajemne oddziaływanie podtonów dwóch dźwięków, które nie łączą się ze sobą. Interwały konsonansowe mają pewne wspólne harmoniczne, ponieważ ich częstotliwości są w prostych proporcjach; tryton nie ma takich proporcji.</p>
+        </section>
         <section class="info" id="bonus">
           <h3>Zachęcamy do utworzenia czegoś własnego 😊</h3>
         </section>
